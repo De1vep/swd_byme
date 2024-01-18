@@ -1,0 +1,247 @@
+What is carried out during analysis modeling?
+A. Developing use case models
+B. Developing data flow and entity relationship diagrams
+--------C. Developing static and dynamic models
+D. Developing software architectures
+
+
+
+What is a coordinator object?
+A. A manager object
+B. An object that makes decisions based on a state machine
+----C. A decision-making object
+D. An object that decides which entity object to interact with
+
+What is a control object?
+A. An object that depends on other objects
+B. A object provides the overall coordination of the objects that realize one c
+-----C. An object that controls other objects
+D. An object that is controlled by other objects
+
+
+Choose the best answer about UML
+A. A graphical modeling language for describing object-oriented models
+B. A graphical modeling method for describing object-oriented models
+C. A graphical language for describing object-oriented models
+---D. A standardized graphical language and notation for
+describing object-oriented models maintained by OMG
+
+
+What does the system context class diagram deçict
+A. The entity classes in the system
+B. How the system interfaces to other systems
+-----C. The external classes that connect to the system
+D. The context classes in the system
+
+What can an activity diagram be used for in use case modning?
+A. To depict the sequence of activities executed by all the une cieves in the system
+B. To depict the sequence of external activities that the use cate teracts with
+C. To depict the sequence of active objects in a use case
+---D. To depict the activities in the main and alternative sequences of a use case
+
+
+What is carried out during design modeling?
+A. Developing use case models
+B. Developing data flow and entity relationship diagrams
+C. Developing static and dynamic models
+---D. Developing software architectures
+
+What is the correct definition of software modeling according to the Otect Modeling Group (OMG)
+A. modeling is the designing of software applications before coding 
+B. Software modeling is the process of building software modelis
+---C. Software modeling is the process of building diagrams
+D. Software modeling is an essential part of the software development proxima
+
+
+What is the stereotype extension mechanism?
+----A. It allows defining a new building block that is derived from an existing UML modeling element but tailored to the modeler's problem
+B. It allows defining a new building block that is not based on existing UML modeling elements
+C. It allows defining a new element that is derived from an existing UML modeling element but tailored to the modeler's problem
+D. It allows defining a new element that is not based on existing UML modeling elements
+
+
+What does a state machine diagram depict?
+A. States and relationships
+B. Events and transitions
+C. States and objects
+---D. States and state transitions
+
+What is the COMET method?
+A. A UML-based software modeling method
+B. Software modeling and architectural design method
+C. A Software development method of rational
+---D. A UML-based software modeling and architectural design method
+
+
+What is a state-dependent control object?
+A. An object that depends on a state machine
+B. An object that communicates with a state machine
+C. An object that controls a state machine
+---D. An object that executes a state machine
+
+
+What is the generic form of an interaction diagram?
+A. Depicts several object instances interacting with each other
+B. Depicts one possible sequence of instances among object interactions
+---C. Depicts all possible interactions among object instances
+D. Depicts all object instances and their links to each other
+
+
+What can an inclusion use case be used for?
+A. To describe common sequences of interactions in several use cases, which can then be extracted
+reused.
+B. To describe a use case that calls other use cases
+----C. To describe functionality that other use cases can use
+D. To describe a use case that includes other use cases
+
+
+Which of the following are object oriented concepts?
+A. Modules and interfaces
+B. Modules and information hiding
+---C. Classes, information hiding, and inheritance
+D. Concurrency and information hiding
+
+What is an active object used to depict?
+A. concurrent object
+B. thread
+C. task
+---D. All above
+
+
+Which method can be used to to model entity classes according to object-oriented modeling method?
+A. Data dictionary
+B. Entity relationship diagram
+-----C. Class diagram in UML
+D. Object diagram in UML
+
+What do class structuring criteria help with?
+---A. Structuring an application into classes
+B. Defining the attributes of a class
+C. Defining the associations of a class
+D. Defining the operations of a class
+
+
+What is inheritance?
+A. A mechanism for inheriting characteristics from a parert
+---B. A mechanism for sharing and reusing code between classes
+C. A mechanism for sharing data between classes
+D. A mechanism for hiding information between classes
+
+
+
+What is the unified software development process (USDP/RUP)?
+----A. A use case-driven software process that uses the UML notation
+B. A software process that uses the UML notation
+C. A use case-driven software process
+D. An object-driven software process that uses the UML notation
+
+
+What is information hiding in object-oriented design?
+A. Hiding information so that it cannot be found
+---B. Hiding a design decision that is considered likely to change
+C. Hiding information to make it secure
+D. Encapsulating data in a class
+
+
+
+What does an interaction diagram depict?
+A. The state and transitions inside a control object
+B. Classes and their relationships
+---C. Software objects and the sequence of their interactions
+D. The external objects communicating with the system
+
+
+
+What is a class?
+A. An object instance
+B. The implementation of the object
+----C. A collection of objects with the same characteristics
+D. A collection of objects with different characteristics
+
+
+
+What are the main steps in the stateless dynamic interaction modeling approach?
+A. Develop use case model, Determine objects needed to realize use case, Determine message communication sequence, Determine alternative sequences
+--B. Determine objects needed to realize use case, Determine message communication sequence
+C. Develop use case model, Determine message communication sequence, Determine alternative sequences
+D. Develop use case diagram, Determine objects needed to realize use case, Determine message communication sequence, Determine alternative sequences
+
+
+What is a passive object?
+A. An object can have its own thread of control and can execute concurrently with other objects
+B. An object has no thread of control and can execute concurrently with other objects
+---C. An object has no thread of control and executes only when another object invokes one of its operations
+D. Any object
+
+
+What approach does the spiral model emphasize?
+A. Phased software development
+B. Throwaway prototyping
+---C. Risk-driven development
+D. Incremental development
+
+What is the notation of the actor concept?
+A. An oval
+--B. A stick figure
+C. A box
+D. A dashed line
+
+What is notation for a synchronous messages (from UML1.4)?
+A. A sold line with an arrow with a sock arrowhead
+B. A solid line with an arrow with a half arrowhead
+--C. A dotted line with an arrow with a stick arrowhead
+D. A dotted line with an arrow with a half arrowhead
+
+
+What is an association class?
+A. a class models attributes of an association relationship
+B. A class models an many-to-many association relationship
+---C. a class models an association between two or more classes. Its attributes are the attributes of the association
+D. a association that models an association between two or more classes. Its attributes are the attributes of the association.
+
+
+What is the evolutionary prototyping approach?
+A. A form of incremental development in which the prototype is mapped to software architecture or user interfaces when the delivered system
+----B. A form of software development in which the prototype evolves through several intermediate operational systems into the delivered system
+C. Risk-driven development
+D. A form of incremental development in which the prototype evolves through several intermediate operational systems into the delivered system
+
+
+What phrases is UML abbreviated from?
+---A. Unified Modeling Language
+B. Uniform Model Language
+C. Universal Modeling Linguistics
+D. Unified Management Logic
+
+
+What is a use case?
+(a) A case study involving users
+(b) A sequence of interactions between
+the user and the system
+----(c) A sequence of interactions between
+the user and the objects in the
+system
+(d) A sequence of user inputs to the
+system
+
+
+What is carried out during requirements modeling?
+A. Functional requirements of the system are described in terms of functions, inputs, and outputs.
+---B. Functional requirements of the system are described in terms of actors and use cases.
+C. Functional requirements of the system are described textually.
+D. Functional requirements of the system are determined by interviewing users.
+B. Functional requirements of the system are described in terms of actors and use cases.
+
+
+What is the purpose of a stereotype in class structuring?
+---A. To label a class according to its class structuring criterion
+B. To identify the objects that belong to the same class
+C. To distinguish between external objects and software objects
+D. To identify the association between two classes
+
+
+What is carried out during analysis modeling?
+A. Developing use case models
+B. Developing data flow and entity relationship diagrams
+---C. Developing static and dynamic models
+D. Developing software architecture
