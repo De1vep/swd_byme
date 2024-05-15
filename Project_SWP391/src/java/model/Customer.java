@@ -9,13 +9,14 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.ArrayList;
 
 /**
  *
  * @author admin
  */
 public class Customer extends DBContext{
-    String id,username,pass,name,email,phone,gender,address;
+    String id,username,pass,name,email,phone,gender,address,type;
     Connection cnn;//ket noi
     Statement stm;//thuc thi cau lenh sql
     ResultSet rs;//luu tru du lieu va xu li
@@ -31,7 +32,13 @@ public class Customer extends DBContext{
     }
     public Customer() {
     }
-
+    
+    public Customer(String username, String pass) {
+        this.username = username;
+        this.pass = pass;
+        connect();
+    }
+    
     public Customer(String username, String pass, String email) {
         this.username = username;
         this.pass = pass;
@@ -39,7 +46,7 @@ public class Customer extends DBContext{
         connect();
     }
 
-    public Customer(String id, String username, String pass, String name, String email, String phone, String gender, String address) {
+    public Customer(String id, String username, String pass, String name, String email, String phone, String gender, String address, String type) {
         this.id = id;
         this.username = username;
         this.pass = pass;
@@ -48,7 +55,11 @@ public class Customer extends DBContext{
         this.phone = phone;
         this.gender = gender;
         this.address = address;
+        this.type = type;
+        connect();
     }
+
+   
 
     public String getId() {
         return id;
@@ -113,8 +124,32 @@ public class Customer extends DBContext{
     public void setAddress(String address) {
         this.address = address;
     }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+    public boolean checkUsername(String uname){
+        try {
+            String strSelect = "select username from Customer where username= ? union select username from Administrator where username= ?";
+                    
+            pstm=cnn.prepareStatement(strSelect);
+            pstm.setString(1, uname);
+            pstm.setString(2, uname);
+            rs=pstm.executeQuery();
+            while (rs.next()) {
+              return false;
+            }
+        } catch (Exception e) {
+            System.out.println("CheckUsernameFail:"+e.getMessage());
+        }
+        return true;
+    }
     public void registerCustomer() {
-         try{
+        try{
             String strAdd=
                     "insert into Customer (username,password,email ) values(?,?,?)";
            
@@ -124,9 +159,65 @@ public class Customer extends DBContext{
             pstm.setString(3, email);
         
             pstm.execute();
-       } catch(Exception e){
+        } catch(Exception e){
             System.out.println("register fail:"+e.getMessage());
 
        }
+    }
+    public Customer checkCustomer(){
+        try {
+            String strSelect = "select * from Customer "
+                    + "where username=? "
+                    + "and password=?";
+            pstm=cnn.prepareStatement(strSelect);
+            pstm.setString(1, username);
+            pstm.setString(2, pass);
+            rs=pstm.executeQuery();
+            while (rs.next()) {
+                String id=String.valueOf(rs.getInt(1));
+                String email=rs.getString(5);
+                String fname=rs.getString(4);
+                String gender="Femail";
+                if(rs.getBoolean(7)){
+                    gender="Male";
+                }
+                String phone=rs.getString(6);
+                String address=rs.getString(8);
+                String type=String.valueOf(rs.getInt(9));
+                
+                
+                return new Customer(id, username, pass, fname, email, phone, gender, address, type);
+            }
+        } catch (Exception e) {
+            System.out.println("Checkname:"+e.getMessage());
+        }
+        return null;
+    }
+    public ArrayList<Customer> getListNewUser(){
+        ArrayList<Customer> data = new ArrayList<>();
+        try {
+            String strSelect = "select * from Customer p,Categories c where p.CategoryID=c.CategoryID";
+//        + "where account='"+account+"' "
+//        + "and password='"+password+"'";
+            stm = cnn.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
+            rs = stm.executeQuery(strSelect);
+            while (rs.next()) {
+               String id=String.valueOf(rs.getInt(1));
+                String email=rs.getString(5);
+                String fname=rs.getString(4);
+                String gender="Femail";
+                if(rs.getBoolean(7)){
+                    gender="Male";
+                }
+                String phone=rs.getString(6);
+                String address=rs.getString(8);
+                String type=String.valueOf(rs.getInt(9));
+               data.add(new Customer(id, username, pass, fname, email, phone, gender, address, type));
+
+            }
+        } catch (Exception e) {
+            System.out.println("getListUser:"+e.getMessage());
+        }
+        return data;
     }
 }

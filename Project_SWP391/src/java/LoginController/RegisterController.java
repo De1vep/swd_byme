@@ -71,8 +71,14 @@ public class RegisterController extends HttpServlet {
         String email=request.getParameter("email");
         String pass=request.getParameter("pass");
         Customer customer=new Customer(username, pass, email);
+        if(customer.checkUsername(username)){
         customer.registerCustomer();
-         request.getRequestDispatcher("login.html").forward(request, response);
+        request.getRequestDispatcher("login.jsp").forward(request, response);
+        }else{
+            request.setAttribute("msg", "UserName exist.");
+        request.getRequestDispatcher("register.jsp").forward(request, response);
+
+        }
 
     }
 
